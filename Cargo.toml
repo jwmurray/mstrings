@@ -7,11 +7,22 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rustils = "0.0.8"
+dissolve = "0.2.2"
+regex = "1.1.5"
+stfu8 = "0.2.4"
+unicode-segmentation = "1.2.0"
+unidecode = "0.3.0"
 
+#[dependencies.voca_rs]
+#path = "../voca_rs"
 
-[dependencies.voca_rs]
-path = "../voca_rs"
+#[target.x86_64-unknown-linux-musl]
+#linker = "x86_64-linux-musl-gcc"
 
-[target.x86_64-unknown-linux-musl]
-linker = "x86_64-linux-musl-gcc"
+# To use vendored sources, add this to your .cargo/config for this project:
+
+# [source.crates-io]
+# replace-with = "vendored-sources"
+
+# [source.vendored-sources]
+# directory = "/home/jmurray/code/rust/mstrings/vendor"

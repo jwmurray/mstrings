@@ -1,0 +1,17 @@
+[package]
+name = "strings"
+version = "0.1.0"
+authors = ["jmurray <john@gardenway.org>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rustils = "0.0.8"
+
+
+[dependencies.voca_rs]
+path = "../voca_rs"
+
+[target.x86_64-unknown-linux-musl]
+linker = "x86_64-linux-musl-gcc"
